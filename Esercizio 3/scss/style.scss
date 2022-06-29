@@ -1,0 +1,59 @@
+@import 'variables';
+@import 'buttons';
+
+body {
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    margin:0;
+    padding:0;
+    background-color: map-get($palette, dark);
+}
+
+.container {
+    padding: 0 3em 2em 3em;
+}
+
+nav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2em;
+
+    .logo {
+        color: map-get($palette, "medium" )
+    }
+
+    li {
+        display:inline;
+        padding: 0 1em;
+
+        a{
+            text-decoration: none;
+            color: map-get($palette, "light" );
+            &:hover {
+                color: map-get($palette, "medium" );
+            };
+        };
+    };
+}
+.showcase-content {
+    display: map-get($flex, "d");
+    justify-content: map-get($flex, "justify");
+    align-items: map-get($flex, "align");
+
+    h1 {
+        font-size: map-get($fs, "big" );
+        color: map-get($palette, "light");
+    };
+
+    p {
+        color: map-get($palette, "light");
+        margin-bottom: 2em;
+    };
+
+}
+

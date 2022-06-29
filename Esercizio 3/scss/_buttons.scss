@@ -1,0 +1,31 @@
+$btn: (
+    primaryBg: map-get($palette, medium),
+    secondaryBg: map-get($palette, light),
+    btnTxt: map-get($palette, dark),
+    padding: 1em 2em,
+    radius: 5px,
+    decoration: none
+);
+
+.btn-primary, .btn-secondary {
+    color: map-get($btn, btnText);
+    border-radius: map-get($btn, radius);
+    padding: map-get($btn, padding);
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: map-get($btn, primaryBg);
+    &:hover {
+        opacity: 0.8;
+        transform:scale(0.9);
+    }
+}
+
+.btn-secondary {
+    background-color: map-get($btn, secondaryBg);
+    &:hover {
+        opacity: 0.8;
+        transform:scale(0.9);
+    }
+}
