@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", "sans-serif";
+}
+
+p {
+  font-family: "Roboto", "sans-serif";
+}
+
+#main-menu {
+  height: 100px;
+  background-color: #023e8a;
+  border-radius: 15px;
+  padding-left: 2em;
+}
+@media (max-width: 800px) {
+  #main-menu {
+    height: auto;
+  }
+}
+#main-menu ul {
+  margin: 0 0 0 0;
+  margin-left: 0;
+  padding-left: 0;
+  text-indent: 0;
+}
+#main-menu ul li {
+  display: inline-block;
+  margin-left: 20px;
+  margin-top: 0;
+}
+#main-menu ul li:first-child {
+  margin-left: 0;
+}
+#main-menu ul li a {
+  display: block;
+  font-family: "Montserrat";
+  text-decoration: none;
+  color: #fff;
+  line-height: 80px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media (max-width: 800px) {
+  #main-menu ul li a {
+    line-height: 40px;
+  }
+}
+#main-menu a:hover {
+  opacity: 0.8;
+  transform: scale(0.95);
+}
+
+#main {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  gap: 2em;
+  padding: 5em 15% 5em 15%;
+}
+#main a {
+  font-weight: 600;
+  color: #fca311;
+}
+
+button {
+  background-color: #fca311;
+  color: #fff;
+  padding: 0.5em 2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 3px 3px 3px #444;
+}
+button:hover {
+  transform: scale(0.95);
+}
+
+#sidebar ul {
+  list-style-type: none;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+#sidebar ul li {
+  font-family: "Montserrat";
+  font-size: 1.5rem;
+  padding: 1em 0.5em;
+  width: 100%;
+  border-bottom: 2px dashed #b3b3b3;
+}
+#sidebar ul li:hover {
+  background-color: #e6e6e6;
+}
+
+#footer {
+  height: 100px;
+  width: 100%;
+  background-color: #023e8a;
+  bottom: 0;
+}
+
+form fieldset {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: start;
+  padding: 1em;
+}
+form fieldset input:focus {
+  border: 2px solid #00b4d8;
+}
+
+/*# sourceMappingURL=style.css.map */

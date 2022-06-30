@@ -1,0 +1,89 @@
+@mixin getGoogleFont($family) {
+    $family: unquote($family);
+    @import url('https://fonts.googleapis.com/css2?family=#{$family}&display=swap');
+
+}
+
+@mixin headerNav($height,$linkmargin,$bgColor, $txtColor, $breakpoint: 800px){
+	height: $height;
+    background-color: $bgColor;
+	@media (max-width: $breakpoint){height: auto;}
+	ul {
+		margin: 0 0 0 0;
+		margin-left: 0;
+		padding-left: 0;
+		text-indent: 0;
+		li {
+			display: inline-block;
+			margin-left: 30px - $linkmargin;
+			margin-top: 0;
+			&:first-child{margin-left: 0;}
+			a{
+				display: block;
+                font-family: $hFont;
+                text-decoration: none;
+                color: $txtColor;
+				line-height: ($height - (2 * $linkmargin));
+				margin-top: $linkmargin;
+				margin-bottom: $linkmargin;
+				padding-left: $linkmargin;
+				padding-right: $linkmargin;
+				@media (max-width: $breakpoint){
+					line-height: 40px;
+				}
+			}
+		}
+	}
+}
+
+@mixin gridContainer{
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    gap:2em;
+    padding: 5em 15% 5em 15%;
+
+        a{
+            font-weight: 600;
+            color: $aColor;
+        }
+
+}
+
+@mixin buttons {
+    background-color: $aColor;
+    color: #fff;
+    padding: .5em 2em;
+    border: none;
+    border-radius: 5px;
+    cursor:pointer;
+    box-shadow: 3px 3px 3px #444;
+
+    &:hover{
+        transform:scale(0.95);
+    }
+}
+
+@mixin sidebar {
+    list-style-type: none;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    li {
+        font-family: $hFont;
+        font-size: 1.5rem;
+        padding: 1em .5em;
+        width:100%;
+        border-bottom: 2px dashed #b3b3b3;
+        &:hover{
+            background-color: darken(#fff, 10%);
+        }
+    }
+}
+
+@mixin footer($height){
+    height: $height;
+    width: 100%;
+    background-color: $navBg;
+    bottom:0;
+}
